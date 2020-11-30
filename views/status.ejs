@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="utf-8" />
+    <title>BOTTLE SENSOR</title>
+    <meta name="description" content="monitoring packaging machine system" />
+    <link type="text/css" rel="stylesheet" href="/static/admin/style.css" />
+    <link type="text/css" rel="stylesheet" href="/static/admin/normallize.css" />
+ </head>
+ <body>
+   <div id="container">
+        
+      <div id="menu">
+              <ul>
+                <li>
+                        <a href="main">Main</a>
+                                <ul class="sub-menu">
+                                        <li><a href="sen1">SENSOR1</a></li>
+                                        <li><a href="sen2">SENSOR2</a></li>
+                                        <li><a href="sen3">SENSOR3</a></li>
+                                        <li><a href="pro">Total Product</a></li>
+                                </ul>
+                        </li>
+                        <li><a href="status">Status</a></li>
+                        <li><a href="barcode">Product Status</a></li>
+              </ul>
+
+      </div><!--#menu-->
+
+      <div id="content">
+
+              <div id="header">
+                      <!--<div id="logo"><img src="/static/admin/img/IU_logo.png"></div>-->
+                      <div id="slogan"></div>
+                      <p>Status of the system</p>
+              </div><!--#header-->
+
+              <div class="call-to-action">
+                        <p>Status</p>
+              </div><!--.call-to-action-->
+              <div class="database">
+                <style type="text/css">
+                        table, th, td{
+                            border-top:1px solid #ccc;
+                            border-bottom:1px solid #ccc;
+                        }
+                        table{
+                            border-collapse:collapse;
+                            width:100%;
+                        }
+                        th, td{
+                            text-align:center;
+                            padding:10px;
+                        }
+                    </style>
+                      <table border="1">
+                              
+                              <tr>
+                                      <th>ID</th>
+                                      <th>Name</th>
+                                      <th>Value</th>
+                                      <th>Date</th>
+                              </tr>
+                              <% for (var i = 0; i < list.length; i++) {%>
+                              <tr>
+                                
+                                       <td> <%= list[i].ID %> </td>
+                                       <td> <%= list[i].Name %> </td>
+                                       <td> <%= list[i].Value %> </td>
+                                       <td> <%= list[i].Date %> </td>
+                              
+                              </tr>
+                              <% } %>  
+                      </table>
+              
+              </div>
+              
+
+      </div><!--#content-->
+
+      <div id="footer">
+
+      </div><!--#footer-->
+      <p>Copyright &copy; 2020 </p>
+</div><!--#container-->
+ </body>
+</html>
